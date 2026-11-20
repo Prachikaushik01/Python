@@ -6,17 +6,14 @@ current hour'''
 Good Afternoon: 12:00 PM to 4:59 PM (Noon to Evening)
 Good Evening: 5:00 PM to 11:59 PM (Evening to Midnight)'''
 import time
-current_hour = int(time.strftime('%H'))
-if(0<=current_hour<12):
-    greeting="Good Morning"
-elif(12<=current_hour<17):
-    greeting="Good Afternoon"
-else:
-    greeting="Good Evening"
-current_time=time.strftime("%I:%M %p")
-print("Current Time:", current_time)
-print(greeting)
-'''%H-24 HOUR FORMAT(00-23)
-   %I-12 HOUR FORMAT(01-12)
-   %M-MINUTES(00-59)
-   %p-AM/PM'''
+t = time.strftime('%H:%M:%S')
+hour = int(time.strftime('%H'))
+print(hour)
+if(hour>=0 and hour<12):
+    print("Good Morning Sir!")
+elif(hour>=12 and hour<17 ):
+    print("Good Afternoon Sir")
+elif(hour>=17 and hour<0):
+    print("Good Night Sir")
+
+                                       
